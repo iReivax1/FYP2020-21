@@ -74,7 +74,7 @@ def read_data_words():
             x_train.append(data)
             y_train.append(int(row[0]))
 
-    test_file = os.path.join(dir,'test_medium_trojan.csv')
+    test_file = os.path.join(dir,'trojan/test_medium_trojan.csv')
     with open(str(test_file), encoding='utf-8') as filex:
         reader = csv.reader(filex)
         for row in reader:
@@ -102,7 +102,7 @@ def read_data_words():
 def read_data_words_predict():
     x_train, y_train, = [], []
     cop = re.compile("[^a-z^A-Z^0-9^,^.^' ']")
-    train_file = os.path.join(dir, 'train_medium_trojan.csv')
+    train_file = os.path.join(dir, 'trojan/train_medium_trojan.csv')
     with open(str(train_file), encoding='utf-8') as filex:
         reader = csv.reader(filex)
         for row in reader:
